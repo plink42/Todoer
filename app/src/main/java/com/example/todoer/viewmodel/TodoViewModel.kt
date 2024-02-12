@@ -1,6 +1,5 @@
 package com.example.todoer.viewmodel
 
-import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,7 +8,7 @@ import com.example.todoer.data.AppDatabase
 import com.example.todoer.data.Todo
 import kotlinx.coroutines.launch
 
-class TodoViewModel(private val database: AppDatabase, context: Context) : ViewModel() {
+class TodoViewModel(private val database: AppDatabase) : ViewModel() {
 
     private val _allTodos = MutableLiveData<List<Todo>>()
     var allTodos: LiveData<List<Todo>> = _allTodos

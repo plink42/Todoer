@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
         val database = Room.databaseBuilder(
             applicationContext, AppDatabase::class.java, "todo-database"
         ).build()
-        val todoModel = TodoViewModel(database, applicationContext)
+        val todoModel = TodoViewModel(database)
         setContent {
             TodoerTheme {
                 Surface(
