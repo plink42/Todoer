@@ -105,6 +105,17 @@ fun TodoList(viewModel: TodoViewModel) {
                     .fillMaxHeight()
             )
         }
+        if (todoList.value.isEmpty()) {
+            Text(text = "No tasks",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .height(35.dp)
+                    .fillMaxWidth()
+                    .fillMaxHeight()
+            )
+        }
         todoList.value.forEach { todo ->
             Row {
                 Text(text = todo.text,
@@ -140,6 +151,17 @@ fun TodoList(viewModel: TodoViewModel) {
                 .fillMaxWidth()
                 .fillMaxHeight()
         )
+        if (completed.value.isEmpty()) {
+            Text(text = "No completed tasks",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .height(35.dp)
+                    .fillMaxWidth()
+                    .fillMaxHeight()
+            )
+        }
         completed.value.forEach { todo ->
             Row {
                 Text(text = todo.text,
